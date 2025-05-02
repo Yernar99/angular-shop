@@ -1,0 +1,9 @@
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+        <span class="navbar-brand">Магазин</span>
+        <div>
+            Корзина: {{ cartService.items.length }} товаров
+            (${{ cartService.getTotal() }})
+        </div>
+    </div>
+</nav>
