@@ -17,4 +17,10 @@ export class ApiService {
     getCategories(): string[] {
         return [...new Set(this.mockProducts.map(p => p.category))];
     }
+    
+    searchProducts(query: string): Product[] {
+        return this.mockProducts.filter(p => 
+          p.title.toLowerCase().includes(query.toLowerCase())
+        );
+      }
 }
